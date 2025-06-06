@@ -1,0 +1,5 @@
+venv
+*.csv
+plugins
+
+client_secrets01.json

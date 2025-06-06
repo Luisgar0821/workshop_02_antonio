@@ -1,0 +1,12 @@
+
+apache-airflow==2.8.1
+
+pydrive
+
+python-dotenv
+psycopg2-binary
+
+polars
+
+pydrive2
+

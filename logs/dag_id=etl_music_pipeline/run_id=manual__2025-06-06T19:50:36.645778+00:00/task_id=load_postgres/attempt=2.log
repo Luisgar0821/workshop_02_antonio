@@ -1,0 +1,23 @@
+[2025-06-06T19:56:40.599+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=load_postgres permission to 509
+[2025-06-06T19:56:40.599+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=load_postgres permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=load_postgres'
+[2025-06-06T19:56:40.618+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=load_postgres permission to 509
+[2025-06-06T19:56:40.619+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=load_postgres permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=load_postgres'
+[2025-06-06T19:56:40.645+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_music_pipeline.load_postgres manual__2025-06-06T19:50:36.645778+00:00 [queued]>
+[2025-06-06T19:56:40.651+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_music_pipeline.load_postgres manual__2025-06-06T19:50:36.645778+00:00 [queued]>
+[2025-06-06T19:56:40.651+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2025-06-06T19:56:40.660+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_postgres> on 2025-06-06 19:50:36.645778+00:00
+[2025-06-06T19:56:40.665+0000] {standard_task_runner.py:60} INFO - Started process 3093 to run task
+[2025-06-06T19:56:40.667+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_music_pipeline', 'load_postgres', 'manual__2025-06-06T19:50:36.645778+00:00', '--job-id', '121', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmp8fffbe1f']
+[2025-06-06T19:56:40.669+0000] {standard_task_runner.py:88} INFO - Job 121: Subtask load_postgres
+[2025-06-06T19:56:40.708+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=load_postgres permission to 509
+[2025-06-06T19:56:40.709+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=load_postgres permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=load_postgres'
+[2025-06-06T19:56:40.710+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_music_pipeline.load_postgres manual__2025-06-06T19:50:36.645778+00:00 [running]> on host 3dc3cd419f05
+[2025-06-06T19:56:40.767+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_music_pipeline' AIRFLOW_CTX_TASK_ID='load_postgres' AIRFLOW_CTX_EXECUTION_DATE='2025-06-06T19:50:36.645778+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-06T19:50:36.645778+00:00'
+[2025-06-06T19:56:40.769+0000] {etl_pipeline.py:25} INFO - [START] Task: load_postgres
+[2025-06-06T19:56:40.771+0000] {logging_mixin.py:188} INFO -  Error al conectar o cargar datos en PostgreSQL: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+[2025-06-06T19:56:40.771+0000] {etl_pipeline.py:27} INFO - [END] Task: load_postgres
+[2025-06-06T19:56:40.772+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-06-06T19:56:40.779+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_music_pipeline, task_id=load_postgres, execution_date=20250606T195036, start_date=20250606T195640, end_date=20250606T195640
+[2025-06-06T19:56:40.799+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-06T19:56:40.821+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

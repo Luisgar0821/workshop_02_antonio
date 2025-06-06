@@ -1,0 +1,1 @@
+[2025-06-06T20:01:13.658+0000] {scheduler_job_runner.py:781} ERROR - Executor reports task instance <TaskInstance: etl_music_pipeline.merge_data manual__2025-06-06T19:50:36.645778+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

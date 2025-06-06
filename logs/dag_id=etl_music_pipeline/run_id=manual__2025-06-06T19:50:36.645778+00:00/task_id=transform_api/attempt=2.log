@@ -1,0 +1,22 @@
+[2025-06-06T19:54:21.200+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=transform_api permission to 509
+[2025-06-06T19:54:21.200+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=transform_api permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=transform_api'
+[2025-06-06T19:54:21.219+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=transform_api permission to 509
+[2025-06-06T19:54:21.220+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=transform_api permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=transform_api'
+[2025-06-06T19:54:21.245+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_music_pipeline.transform_api manual__2025-06-06T19:50:36.645778+00:00 [queued]>
+[2025-06-06T19:54:21.250+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_music_pipeline.transform_api manual__2025-06-06T19:50:36.645778+00:00 [queued]>
+[2025-06-06T19:54:21.250+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2025-06-06T19:54:21.259+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): transform_api> on 2025-06-06 19:50:36.645778+00:00
+[2025-06-06T19:54:21.264+0000] {standard_task_runner.py:60} INFO - Started process 2999 to run task
+[2025-06-06T19:54:21.266+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_music_pipeline', 'transform_api', 'manual__2025-06-06T19:50:36.645778+00:00', '--job-id', '117', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpzd5kgz5a']
+[2025-06-06T19:54:21.267+0000] {standard_task_runner.py:88} INFO - Job 117: Subtask transform_api
+[2025-06-06T19:54:21.299+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=transform_api permission to 509
+[2025-06-06T19:54:21.299+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=transform_api permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:50:36.645778+00:00/task_id=transform_api'
+[2025-06-06T19:54:21.301+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_music_pipeline.transform_api manual__2025-06-06T19:50:36.645778+00:00 [running]> on host 3dc3cd419f05
+[2025-06-06T19:54:21.352+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_music_pipeline' AIRFLOW_CTX_TASK_ID='transform_api' AIRFLOW_CTX_EXECUTION_DATE='2025-06-06T19:50:36.645778+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-06T19:50:36.645778+00:00'
+[2025-06-06T19:54:21.353+0000] {etl_pipeline.py:25} INFO - [START] Task: transform_api
+[2025-06-06T19:54:21.429+0000] {logging_mixin.py:188} INFO - API Spotify transformado.
+[2025-06-06T19:54:21.429+0000] {etl_pipeline.py:27} INFO - [END] Task: transform_api
+[2025-06-06T19:54:21.429+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-06-06T19:54:21.437+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_music_pipeline, task_id=transform_api, execution_date=20250606T195036, start_date=20250606T195421, end_date=20250606T195421
+[2025-06-06T19:54:21.478+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-06T19:54:21.497+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,22 @@
+[2025-06-06T18:50:35.613+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:50:34.756815+00:00/task_id=extract_api permission to 509
+[2025-06-06T18:50:35.613+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:50:34.756815+00:00/task_id=extract_api permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:50:34.756815+00:00/task_id=extract_api'
+[2025-06-06T18:50:35.633+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:50:34.756815+00:00/task_id=extract_api permission to 509
+[2025-06-06T18:50:35.634+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:50:34.756815+00:00/task_id=extract_api permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:50:34.756815+00:00/task_id=extract_api'
+[2025-06-06T18:50:35.661+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_music_pipeline.extract_api manual__2025-06-06T18:50:34.756815+00:00 [queued]>
+[2025-06-06T18:50:35.666+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_music_pipeline.extract_api manual__2025-06-06T18:50:34.756815+00:00 [queued]>
+[2025-06-06T18:50:35.666+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-06-06T18:50:35.676+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): extract_api> on 2025-06-06 18:50:34.756815+00:00
+[2025-06-06T18:50:35.680+0000] {standard_task_runner.py:60} INFO - Started process 1443 to run task
+[2025-06-06T18:50:35.682+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_music_pipeline', 'extract_api', 'manual__2025-06-06T18:50:34.756815+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpc92vg9o7']
+[2025-06-06T18:50:35.684+0000] {standard_task_runner.py:88} INFO - Job 46: Subtask extract_api
+[2025-06-06T18:50:35.717+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:50:34.756815+00:00/task_id=extract_api permission to 509
+[2025-06-06T18:50:35.717+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:50:34.756815+00:00/task_id=extract_api permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:50:34.756815+00:00/task_id=extract_api'
+[2025-06-06T18:50:35.719+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_music_pipeline.extract_api manual__2025-06-06T18:50:34.756815+00:00 [running]> on host 3dc3cd419f05
+[2025-06-06T18:50:35.775+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_music_pipeline' AIRFLOW_CTX_TASK_ID='extract_api' AIRFLOW_CTX_EXECUTION_DATE='2025-06-06T18:50:34.756815+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-06T18:50:34.756815+00:00'
+[2025-06-06T18:50:35.776+0000] {etl_pipeline.py:25} INFO - [START] Task: extract_api
+[2025-06-06T18:50:35.778+0000] {logging_mixin.py:188} INFO -  No se encontró SPOTIFY_TOKEN en el .env
+[2025-06-06T18:50:35.779+0000] {etl_pipeline.py:27} INFO - [END] Task: extract_api
+[2025-06-06T18:50:35.779+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-06-06T18:50:35.786+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_music_pipeline, task_id=extract_api, execution_date=20250606T185034, start_date=20250606T185035, end_date=20250606T185035
+[2025-06-06T18:50:35.814+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-06-06T18:50:35.834+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

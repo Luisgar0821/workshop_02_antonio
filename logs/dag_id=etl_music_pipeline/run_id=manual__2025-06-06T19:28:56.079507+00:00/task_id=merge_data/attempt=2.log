@@ -1,0 +1,45 @@
+[2025-06-06T19:34:05.549+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:28:56.079507+00:00/task_id=merge_data permission to 509
+[2025-06-06T19:34:05.549+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:28:56.079507+00:00/task_id=merge_data permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:28:56.079507+00:00/task_id=merge_data'
+[2025-06-06T19:34:05.571+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:28:56.079507+00:00/task_id=merge_data permission to 509
+[2025-06-06T19:34:05.572+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:28:56.079507+00:00/task_id=merge_data permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:28:56.079507+00:00/task_id=merge_data'
+[2025-06-06T19:34:05.602+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_music_pipeline.merge_data manual__2025-06-06T19:28:56.079507+00:00 [queued]>
+[2025-06-06T19:34:05.608+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_music_pipeline.merge_data manual__2025-06-06T19:28:56.079507+00:00 [queued]>
+[2025-06-06T19:34:05.608+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-06-06T19:34:05.617+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): merge_data> on 2025-06-06 19:28:56.079507+00:00
+[2025-06-06T19:34:05.622+0000] {standard_task_runner.py:60} INFO - Started process 2359 to run task
+[2025-06-06T19:34:05.624+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_music_pipeline', 'merge_data', 'manual__2025-06-06T19:28:56.079507+00:00', '--job-id', '90', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpvop90bi5']
+[2025-06-06T19:34:05.626+0000] {standard_task_runner.py:88} INFO - Job 90: Subtask merge_data
+[2025-06-06T19:34:05.661+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:28:56.079507+00:00/task_id=merge_data permission to 509
+[2025-06-06T19:34:05.661+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:28:56.079507+00:00/task_id=merge_data permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T19:28:56.079507+00:00/task_id=merge_data'
+[2025-06-06T19:34:05.662+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_music_pipeline.merge_data manual__2025-06-06T19:28:56.079507+00:00 [running]> on host 3dc3cd419f05
+[2025-06-06T19:34:05.716+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_music_pipeline' AIRFLOW_CTX_TASK_ID='merge_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-06T19:28:56.079507+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-06T19:28:56.079507+00:00'
+[2025-06-06T19:34:05.717+0000] {etl_pipeline.py:25} INFO - [START] Task: merge_data
+[2025-06-06T19:34:05.771+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl_pipeline.py", line 26, in wrapper
+    result = func(*args, **kwargs)
+  File "/opt/airflow/dags/etl_pipeline.py", line 33, in wrapper
+    func(*args, **kwargs)
+  File "/opt/airflow/src/merge_data/merge.py", line 22, in merge_all_data
+    df_spotify = pl.read_csv(f"{DATA_PROCESSED}/spotify_transformed.csv")
+  File "/home/airflow/.local/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/polars/io/csv/functions.py", line 546, in read_csv
+    df = _read_csv_impl(
+  File "/home/airflow/.local/lib/python3.10/site-packages/polars/io/csv/functions.py", line 694, in _read_csv_impl
+    pydf = PyDataFrame.read_csv(
+FileNotFoundError: No such file or directory (os error 2): /opt/***/dags/data/processed/spotify_transformed.csv
+[2025-06-06T19:34:05.782+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=etl_music_pipeline, task_id=merge_data, execution_date=20250606T192856, start_date=20250606T193405, end_date=20250606T193405
+[2025-06-06T19:34:05.790+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 90 for task merge_data (No such file or directory (os error 2): /opt/***/dags/data/processed/spotify_transformed.csv; 2359)
+[2025-06-06T19:34:05.796+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-06-06T19:34:05.813+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

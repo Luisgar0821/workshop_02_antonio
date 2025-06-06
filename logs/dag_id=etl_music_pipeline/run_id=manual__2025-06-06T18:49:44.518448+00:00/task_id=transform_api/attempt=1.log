@@ -1,0 +1,33 @@
+[2025-06-06T18:49:50.529+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:49:44.518448+00:00/task_id=transform_api permission to 509
+[2025-06-06T18:49:50.530+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:49:44.518448+00:00/task_id=transform_api permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:49:44.518448+00:00/task_id=transform_api'
+[2025-06-06T18:49:50.561+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:49:44.518448+00:00/task_id=transform_api permission to 509
+[2025-06-06T18:49:50.562+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:49:44.518448+00:00/task_id=transform_api permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:49:44.518448+00:00/task_id=transform_api'
+[2025-06-06T18:49:50.609+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_music_pipeline.transform_api manual__2025-06-06T18:49:44.518448+00:00 [queued]>
+[2025-06-06T18:49:50.618+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_music_pipeline.transform_api manual__2025-06-06T18:49:44.518448+00:00 [queued]>
+[2025-06-06T18:49:50.619+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-06-06T18:49:50.635+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): transform_api> on 2025-06-06 18:49:44.518448+00:00
+[2025-06-06T18:49:50.645+0000] {standard_task_runner.py:60} INFO - Started process 1302 to run task
+[2025-06-06T18:49:50.648+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_music_pipeline', 'transform_api', 'manual__2025-06-06T18:49:44.518448+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpghkgvzei']
+[2025-06-06T18:49:50.650+0000] {standard_task_runner.py:88} INFO - Job 30: Subtask transform_api
+[2025-06-06T18:49:50.694+0000] {logging_mixin.py:188} INFO - Changing /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:49:44.518448+00:00/task_id=transform_api permission to 509
+[2025-06-06T18:49:50.694+0000] {logging_mixin.py:188} INFO - Failed to change /opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:49:44.518448+00:00/task_id=transform_api permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=etl_music_pipeline/run_id=manual__2025-06-06T18:49:44.518448+00:00/task_id=transform_api'
+[2025-06-06T18:49:50.696+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_music_pipeline.transform_api manual__2025-06-06T18:49:44.518448+00:00 [running]> on host 3dc3cd419f05
+[2025-06-06T18:49:50.768+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_music_pipeline' AIRFLOW_CTX_TASK_ID='transform_api' AIRFLOW_CTX_EXECUTION_DATE='2025-06-06T18:49:44.518448+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-06T18:49:44.518448+00:00'
+[2025-06-06T18:49:50.770+0000] {etl_pipeline.py:25} INFO - [START] Task: transform_api
+[2025-06-06T18:49:50.770+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl_pipeline.py", line 26, in wrapper
+    result = func(*args, **kwargs)
+  File "/opt/airflow/dags/etl_pipeline.py", line 33, in wrapper
+    func(*args, **kwargs)
+TypeError: transform_api() got an unexpected keyword argument 'conf'
+[2025-06-06T18:49:50.781+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_music_pipeline, task_id=transform_api, execution_date=20250606T184944, start_date=20250606T184950, end_date=20250606T184950
+[2025-06-06T18:49:50.794+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 30 for task transform_api (transform_api() got an unexpected keyword argument 'conf'; 1302)
+[2025-06-06T18:49:50.820+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-06-06T18:49:50.855+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
